@@ -1,7 +1,6 @@
 const img = document.querySelector('img');
-let searchTopic;
 const error = document.querySelector(".error");
-function fetchGif(){
+export function fetchGif(searchTopic){
     fetch(`https://api.giphy.com/v1/gifs/translate?api_key=EROv1aYNO5FNvg5upi7teFQSeSzoiNlQ&s=${searchTopic}`)
     .then(function(response) {
         if(response.ok){
